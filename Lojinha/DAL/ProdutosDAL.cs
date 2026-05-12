@@ -55,10 +55,6 @@ namespace Lojinha.DAL
             {
                 cn.Close();
             }
-
-
-
-
         }
         public void Alterar(ProdutosInformation produtos)
         {
@@ -104,10 +100,6 @@ namespace Lojinha.DAL
             {
                 cn.Close();
             }
-
-
-
-
         }
         public void Excluir(int codigo)
         {
