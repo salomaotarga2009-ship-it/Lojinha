@@ -32,11 +32,11 @@ namespace Lojinha.DAL
 
                 SqlParameter pemail = new SqlParameter("@email", SqlDbType.VarChar, 100);
                 pemail.Value = cliente.Email;
-                cmd.Parameters.Add(pnome);
+                cmd.Parameters.Add(pemail);
 
                 SqlParameter ptelefone = new SqlParameter("@telefone", SqlDbType.VarChar, 100);
                 ptelefone.Value = cliente.Telefone;
-                cmd.Parameters.Add(pnome);
+                cmd.Parameters.Add(ptelefone);
 
                 cn.Open();
                 cmd.ExecuteNonQuery();
@@ -79,11 +79,11 @@ namespace Lojinha.DAL
 
                 SqlParameter pemail = new SqlParameter("@email", SqlDbType.VarChar, 100);
                 pemail.Value = cliente.Email;
-                cmd.Parameters.Add(pnome);
+                cmd.Parameters.Add(pemail);
 
                 SqlParameter ptelefone = new SqlParameter("@telefone", SqlDbType.VarChar, 100);
                 ptelefone.Value = cliente.Telefone;
-                cmd.Parameters.Add(pnome);
+                cmd.Parameters.Add(ptelefone);
 
                 cn.Open();
                 cmd.ExecuteNonQuery();
@@ -113,7 +113,7 @@ namespace Lojinha.DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "exclui.cliente";
+                cmd.CommandText = "exclui_cliente";
                 //Parametros Da Stored Procedure
                 SqlParameter pcodigo = new SqlParameter("@codigo", SqlDbType.Int);
                 pcodigo.Value = codigo;
@@ -144,7 +144,7 @@ namespace Lojinha.DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "lista.cliente";
+                cmd.CommandText = "lista_cliente";
                 //Parametros Da Stored Procedure
                 SqlParameter pfiltro = new SqlParameter("@filtro", SqlDbType.VarChar);
                 pfiltro.Value = filtro;
