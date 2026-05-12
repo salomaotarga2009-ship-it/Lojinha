@@ -13,18 +13,7 @@ namespace Lojinha.DAL
             get
             {
                 return "server = Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=dblojinha;Integrated Security=True;Encrypt=    ;Trust Server Certificate=True";
-            }
-                
-      
-
-
-        }
-            
-           
-            
-        
-            
-         
+            }   
+        }      
     }
-
 }
