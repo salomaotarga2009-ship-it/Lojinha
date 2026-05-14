@@ -68,10 +68,10 @@ namespace Lojinha.DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "altera.cliente";
+                cmd.CommandText = "altera_cliente";
                 //Parametros Da Stored Procedure
                 SqlParameter pcodigo = new SqlParameter("@codigo", SqlDbType.Int);
-                pcodigo.Direction = ParameterDirection.Output;
+                pcodigo.Value = cliente.Codigo;
                 cmd.Parameters.Add(pcodigo);
 
                 SqlParameter pnome = new SqlParameter("@nome", SqlDbType.VarChar, 100);

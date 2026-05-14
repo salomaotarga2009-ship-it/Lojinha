@@ -32,5 +32,49 @@ namespace Lojinha.Formularios
             codigoTextbox.Text = Convert.ToString(cliente.Codigo);
 
         }
+
+        private void alterarButton_Click(object sender, EventArgs e)
+        {
+            if(codigoTextbox.Text.Length == 0)
+            {
+                MessageBox.Show("Um cliente deve ser selecionado para alteração");
+            }
+            else
+                try
+                {
+                    ClienteInformation cliente = new ClienteInformation();
+                    cliente.Codigo = int.Parse(codigoTextbox.Text);
+                    cliente.Nome = nomeTextbox.Text;
+                    cliente.Email = emailTextbox.Text;
+                    cliente.Telefone = telefoneTextbox.Text;
+
+                    ClientesBLL obj = new ClientesBLL();
+                    obj.Alterar(cliente);
+                    MessageBox.Show("Cliente alterado com sucesso");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro " + ex.Message);
+                }
+        }
+
+        private void excluirButton_Click(object sender, EventArgs e)
+        {
+           if(codigoTextbox.Text.Length == 0)
+            {
+                MessageBox.Show("Um cliente deve ser selecionado antes da exclusão");
+            }            
+           else
+                try
+                {
+                    int codigo = Convert.ToInt32(codigoTextbox.Text);
+                    ClientesBLL obj = new ClientesBLL();
+                    obj.Excluir(codigo);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro exclusão " + ex.Message.ToString());
+                }
+        }
     }
 }
