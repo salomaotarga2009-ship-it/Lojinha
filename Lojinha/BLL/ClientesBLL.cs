@@ -18,6 +18,9 @@ namespace Lojinha.BLL
             {
                 throw new Exception("O nome do Cliente é obrigatorio");
             }
+
+            //retira os espaços antes do nome 
+            cliente.Nome = cliente.Nome.Trim();
             //email é sempre em letras minúsculas
             cliente.Email = cliente.Email.ToLower();
             //se está tudo ok, chama a rotina de inserção

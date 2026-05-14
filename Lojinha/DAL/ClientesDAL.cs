@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Lojinha.Modelos;
 
+
 namespace Lojinha.DAL
 {
     public class ClientesDAL
@@ -20,7 +21,7 @@ namespace Lojinha.DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "insere.cliente";
+                cmd.CommandText = "insere_cliente";
                 //Parametros Da Stored Procedure
                 SqlParameter pcodigo = new SqlParameter("@codigo", SqlDbType.Int);
                 pcodigo.Direction = ParameterDirection.Output;
@@ -37,15 +38,15 @@ namespace Lojinha.DAL
                 SqlParameter ptelefone = new SqlParameter("@telefone", SqlDbType.VarChar, 100);
                 ptelefone.Value = cliente.Telefone;
                 cmd.Parameters.Add(ptelefone);
-
+                 
                 cn.Open();
                 cmd.ExecuteNonQuery();
-
                 cliente.Codigo = (Int32)cmd.Parameters["@codigo"].Value;
+
             }
             catch (SqlException ex)
             {
-                throw new Exception("Erro ao acessa banco de dados. " + ex.Number);
+                throw new Exception("Erro ao acessa banco de dados. " + ex.Message.ToString());
             }
             catch
             {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,9 @@ namespace Lojinha.DAL
         {
             get
             {
-                return "server = Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=dblojinha;Integrated Security=True;Encrypt=    ;Trust Server Certificate=True";
+                return @"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog = dblojinha;Integrated Security = True;Encrypt = False";
+
+                //Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = dblojinha; Integrated Security = True; Encrypt = False; Trust Server Certificate = True
             }   
         }      
     }

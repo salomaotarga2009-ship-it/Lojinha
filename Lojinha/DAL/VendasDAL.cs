@@ -8,7 +8,5 @@ namespace Lojinha.DAL
 {
     internal class VendasDAL
     {
-
-
     }
 }
