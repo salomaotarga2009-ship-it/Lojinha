@@ -147,8 +147,9 @@ namespace Lojinha.DAL
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "seleciona_cliente";
                 //Parametros Da Stored Procedure
-                SqlParameter pfiltro = new SqlParameter("@filtro", SqlDbType.VarChar);
+                SqlParameter pfiltro = new SqlParameter("@filtro", SqlDbType.VarChar, 100);
                 pfiltro.Value = filtro;
+                cmd.Parameters.Add(pfiltro);
                 DataTable tabela = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(tabela);
