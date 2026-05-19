@@ -152,7 +152,7 @@
             this.ClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ClientesDataGridView.Location = new System.Drawing.Point(82, 228);
             this.ClientesDataGridView.Name = "ClientesDataGridView";
-            this.ClientesDataGridView.Size = new System.Drawing.Size(438, 150);
+            this.ClientesDataGridView.Size = new System.Drawing.Size(422, 150);
             this.ClientesDataGridView.TabIndex = 12;
             // 
             // FiltrarButton
@@ -176,7 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(577, 450);
             this.Controls.Add(this.filtroTextbox);
             this.Controls.Add(this.FiltrarButton);
             this.Controls.Add(this.ClientesDataGridView);

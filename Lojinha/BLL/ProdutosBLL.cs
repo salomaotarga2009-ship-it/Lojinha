@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 
 namespace Lojinha.BLL
 {
-    internal class ProdutosBLL
-    {
+  
+     internal class ProdutosBLL
+     {
         public void Incluir(ClienteInformation cliente)
         {
             //o nome 
-            if(cliente.Nome.Trim().Length == 0)
+            if (cliente.Nome.Trim().Length == 0)
             {
                 throw new Exception("O nome do cliente é obrigatório");
             }
@@ -55,6 +56,9 @@ namespace Lojinha.BLL
         internal void Incluir(ProdutosInformation produto)
         {
             throw new NotImplementedException();
+
         }
-    }
+     }
 }
+
+
