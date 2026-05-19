@@ -48,7 +48,6 @@
             // 
             // codigoTextBox
             // 
-            this.codigoTextBox.Enabled = false;
             this.codigoTextBox.Location = new System.Drawing.Point(89, 41);
             this.codigoTextBox.Name = "codigoTextBox";
             this.codigoTextBox.Size = new System.Drawing.Size(100, 20);
@@ -116,12 +115,12 @@
             this.produtosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.produtosDataGridView.Location = new System.Drawing.Point(89, 231);
             this.produtosDataGridView.Name = "produtosDataGridView";
-            this.produtosDataGridView.Size = new System.Drawing.Size(348, 150);
+            this.produtosDataGridView.Size = new System.Drawing.Size(362, 150);
             this.produtosDataGridView.TabIndex = 8;
             // 
             // filtrarButton
             // 
-            this.filtrarButton.Location = new System.Drawing.Point(376, 387);
+            this.filtrarButton.Location = new System.Drawing.Point(376, 396);
             this.filtrarButton.Name = "filtrarButton";
             this.filtrarButton.Size = new System.Drawing.Size(75, 23);
             this.filtrarButton.TabIndex = 9;
@@ -131,10 +130,11 @@
             // 
             // filtrarTextBox
             // 
-            this.filtrarTextBox.Location = new System.Drawing.Point(89, 387);
+            this.filtrarTextBox.Location = new System.Drawing.Point(89, 399);
             this.filtrarTextBox.Name = "filtrarTextBox";
             this.filtrarTextBox.Size = new System.Drawing.Size(240, 20);
             this.filtrarTextBox.TabIndex = 10;
+            this.filtrarTextBox.TextChanged += new System.EventHandler(this.filtrarTextBox_TextChanged);
             // 
             // incluirButton
             // 
@@ -144,6 +144,7 @@
             this.incluirButton.TabIndex = 11;
             this.incluirButton.Text = "Incluir";
             this.incluirButton.UseVisualStyleBackColor = true;
+            this.incluirButton.Click += new System.EventHandler(this.incluirButton_Click);
             // 
             // alterarButton
             // 
@@ -153,6 +154,7 @@
             this.alterarButton.TabIndex = 12;
             this.alterarButton.Text = "Alterar";
             this.alterarButton.UseVisualStyleBackColor = true;
+            this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);
             // 
             // limparButton
             // 
@@ -171,6 +173,7 @@
             this.excluirButton.TabIndex = 14;
             this.excluirButton.Text = "Excluir";
             this.excluirButton.UseVisualStyleBackColor = true;
+            this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
             // 
             // BuscarProdutosForm
             // 
