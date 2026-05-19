@@ -36,7 +36,7 @@ namespace Lojinha.Formularios
                 codigoTextbox.Text = "";
                 nomeTextbox.Text = "";
                 emailTextBox.Text = "";
-                telefoneTextbox.Text = ""; 
+                telefoneTextbox.Text = "";
             }
         }
 
