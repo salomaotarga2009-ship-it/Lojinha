@@ -26,8 +26,8 @@ namespace Lojinha.Modelos
             get { return _preco; }
             set { _preco = value; }
         }
-        private string _estoque;
-        public string Estoque
+        private int _estoque;
+        public int Estoque
         {
             get { return _estoque; }
             set { _estoque = value; }

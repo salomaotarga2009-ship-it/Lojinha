@@ -12,31 +12,31 @@ namespace Lojinha.BLL
   
      internal class ProdutosBLL
      {
-        public void Incluir(ClienteInformation cliente)
+        public void Incluir(ProdutosInformation produto)
         {
             //o nome 
-            if (cliente.Nome.Trim().Length == 0)
+            if (produto.Nome.Trim().Length == 0)
             {
-                throw new Exception("O nome do cliente é obrigatório");
+                throw new Exception("O nome do produto é obrigatório");
             }
             //
-            cliente.Email = cliente.Email.ToLower();
+            produto.Nome = produto.Nome.Trim();
             //
-            ClientesBLL obj = new ClientesBLL();
-            obj.Incluir(cliente);
+            ProdutosDAL obj = new ProdutosDAL();
+            obj.Incluir(produto);
         }
-        public void Alterar(ClienteInformation cliente)
+        public void Alterar(ProdutosInformation produto)
         {
             //
-            if (cliente.Nome.Trim().Length == 0)
+            if (produto.Nome.Trim().Length == 0)
             {
-                throw new Exception("O nome do cliente é obrigatório");
+                throw new Exception("O nome do produto é obrigatório");
             }
             //
-            cliente.Email = cliente.Email.ToLower();
+            produto.Preco = produto.Preco;
             //
-            ClientesDAL obj = new ClientesDAL();
-            obj.Alterar(cliente);
+            ProdutosDAL obj = new ProdutosDAL();
+            obj.Alterar(produto);
         }
         public void Excluir(int codigo)
         {
@@ -44,19 +44,13 @@ namespace Lojinha.BLL
             {
                 throw new Exception("Selecione um cliente antes de excluir");
             }
-            ClientesDAL obj = new ClientesDAL();
+            ProdutosDAL obj = new ProdutosDAL();
             obj.Excluir(codigo);
         }
         public DataTable Listagem(string filtro)
         {
-            ClientesDAL obj = new ClientesDAL();
+            ProdutosDAL obj = new ProdutosDAL();
             return obj.Listagem(filtro);
-        }
-
-        internal void Incluir(ProdutosInformation produto)
-        {
-            throw new NotImplementedException();
-
         }
      }
 }

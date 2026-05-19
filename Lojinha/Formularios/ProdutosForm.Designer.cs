@@ -94,7 +94,7 @@ namespace Lojinha.Formularios
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(158, 20);
             this.nomeTextBox.TabIndex = 5;
-            this.nomeTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+           
             // 
             // precoTextbox
             // 
@@ -118,7 +118,7 @@ namespace Lojinha.Formularios
             this.incluiButton.TabIndex = 8;
             this.incluiButton.Text = "Incluir";
             this.incluiButton.UseVisualStyleBackColor = true;
-            
+            this.incluiButton.Click += new System.EventHandler(this.incluiButton_Click);
             // 
             // alterarButton
             // 
@@ -128,6 +128,7 @@ namespace Lojinha.Formularios
             this.alterarButton.TabIndex = 9;
             this.alterarButton.Text = "Alterar";
             this.alterarButton.UseVisualStyleBackColor = true;
+            this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);
             // 
             // excluirButton
             // 
@@ -137,6 +138,7 @@ namespace Lojinha.Formularios
             this.excluirButton.TabIndex = 10;
             this.excluirButton.Text = "Excluir";
             this.excluirButton.UseVisualStyleBackColor = true;
+            this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
             // 
             // limparButton
             // 
@@ -179,11 +181,6 @@ namespace Lojinha.Formularios
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion
